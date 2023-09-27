@@ -11,15 +11,15 @@ enum TaskCategory {
   travel(Icons.flight, Colors.pink),
   work(Icons.work, Colors.amber);
 
-  // static TaskCategory stringToTaskCategory(String name) {
-  //   try {
-  //     return TaskCategory.values.firstWhere(
-  //           (category) => category.name == name,
-  //     );
-  //   } catch (e) {
-  //     return TaskCategory.others;
-  //   }
-  // }
+  static TaskCategory stringToTaskCategory(String name) {
+    try {
+      return TaskCategory.values.firstWhere(
+            (category) => category.name == name,
+      );
+    } catch (e) {
+      return TaskCategory.others;
+    }
+  }
 
   final IconData icon;
   final Color color;
